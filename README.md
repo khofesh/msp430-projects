@@ -96,3 +96,9 @@ sudo MSP430Flasher -n MSP430G2553 -w build/MSP430G2553/blink_led/blink_led_g2553
 # MSP430FR2355
 sudo MSP430Flasher -n MSP430FR2355 -w build/MSP430FR2355/blink_led/blink_led_fr2355.hex -v -z [VCC]
 ```
+
+## references
+
+- https://www.ti.com/tool/MSP430-GCC-OPENSOURCE
+- https://thedestitutedeveloper.blogspot.com/2015/02/msp430-and-fedora-21-same-but-different.html
+- https://copr.fedorainfracloud.org/coprs/nielsenb/msp430-development-tools
