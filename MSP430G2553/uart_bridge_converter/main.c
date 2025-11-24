@@ -84,7 +84,9 @@ void init_gpio()
     P1SEL2 = BIT1 + BIT2;
 }
 
-/* INTERRUPTS */
+/***************************
+ *       INTERRUPTS        *
+ ***************************/
 #if defined(__TI_COMPILER_VERSION__) || defined(__IAR_SYSTEMS_ICC__)
 #pragma vector = USCIAB0RX_VECTOR
 __interrupt void USCI0RX_ISR(void)
