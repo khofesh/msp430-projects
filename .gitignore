@@ -78,3 +78,6 @@ Thumbs.db
 
 # msp430 logs
 Log/
+temp/
+
+build.ninja
