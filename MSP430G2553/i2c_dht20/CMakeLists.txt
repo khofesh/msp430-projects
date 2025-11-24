@@ -6,6 +6,8 @@ set(PROJECT_NAME "i2c_dht20_g2553")
 set(SOURCES
     main.c
     uart.c
+    dht20.c
+    driver_dht20_interface.c
 )
 
 # Create executable
