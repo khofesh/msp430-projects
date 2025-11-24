@@ -4,12 +4,7 @@
       "name": "Linux",
       "includePath": [
         "${workspaceFolder}/**",
-        "/usr/include/c++/15",
-        "/usr/include/c++/15/x86_64-redhat-linux",
-        "/usr/include/c++/15/backward",
-        "/usr/lib/gcc/x86_64-redhat-linux/15/include",
-        "/usr/local/lib",
-        "/usr/include"
+        "/usr/msp430-elf/msp430-elf/include"
       ],
       "defines": [],
       "compilerPath": "/usr/bin/g++",

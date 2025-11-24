@@ -25,6 +25,7 @@
     "*.yaml": "yaml",
     "*.html": "html",
     "*.css": "css",
-    "stdexcept": "cpp"
+    "stdexcept": "cpp",
+    "msp430.h": "c"
   }
 }
