@@ -48,3 +48,5 @@ install
 ```shell
 sudo dnf install msp430-elf-gcc msp430-elf-binutils msp430-elf-gdb mspds msp430flasher msp430-gcc-support-files dos2unix
 ```
+
+The toolchain will be installed in `/usr/msp430-elf/`.

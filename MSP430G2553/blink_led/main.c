@@ -1,5 +1,3 @@
-#define __MSP430G2553__ 1
-
 #include <msp430.h>
 
 int main(void)

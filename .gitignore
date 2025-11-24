@@ -1,0 +1,77 @@
+# Build artifacts
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.lib
+*.out
+*.bin
+*.gch
+*.pch
+
+# Debugging information
+*.dwo
+*.elf
+*.pdb
+*.ilk
+*.suo
+
+# Temporary files
+*~
+*.bak
+*.tmp
+*.log
+*.swp
+*.swo
+*.swn
+
+# IDE-specific files
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.filters
+*.user
+*.opendb
+*.VC.db
+*.sdf
+*.ipch
+
+# Xcode
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcscmblueprint
+*.xctestplan
+*.dSYM/
+
+# Eclipse
+.project
+.cproject
+.settings/
+
+# CLion
+.idea/
+cmake-build-*/
+
+# Other common IDE files
+*.code-workspace
+*.sublime-workspace
+*.vscode/
+
+# CMake build directory
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+# Makefile
+
+# Dependency managers (e.g., Conan, vcpkg)
+conanbuildinfo.txt
+conaninfo.txt
+conan_package_info.json
+vcpkg_installed/
+
+# Operating system files
+.DS_Store
+Thumbs.db
