@@ -50,3 +50,49 @@ sudo dnf install msp430-elf-gcc msp430-elf-binutils msp430-elf-gdb mspds msp430f
 ```
 
 The toolchain will be installed in `/usr/msp430-elf/`.
+
+### building projects
+
+#### Configure and Build All Projects
+
+```bash
+mkdir build
+cd build
+
+cmake ..
+
+# build all projects
+cmake --build .
+```
+
+#### Build Specific Target
+
+```bash
+# build only MSP430G2553 blink_led
+cmake --build build --target blink_led_g2553.elf
+
+# build only MSP430FR2355 blink_led
+cmake --build build --target blink_led_fr2355.elf
+```
+
+#### Clean Build
+
+```bash
+rm -rf build
+mkdir build
+cd build
+cmake ..
+cmake --build .
+```
+
+### Flashing to Device
+
+#### Using MSP430Flasher
+
+```bash
+# MSP430G2553
+sudo MSP430Flasher -n MSP430G2553 -w build/MSP430G2553/blink_led/blink_led_g2553.hex -v -z [VCC]
+
+# MSP430FR2355
+sudo MSP430Flasher -n MSP430FR2355 -w build/MSP430FR2355/blink_led/blink_led_fr2355.hex -v -z [VCC]
+```

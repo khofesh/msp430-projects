@@ -75,3 +75,6 @@ vcpkg_installed/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# msp430 logs
+Log/
