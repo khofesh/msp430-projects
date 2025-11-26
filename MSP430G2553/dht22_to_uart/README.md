@@ -73,3 +73,5 @@ dht_data.bytes[0]  // First byte
 // Access as struct (same memory!)
 dht_data.val.hh    // First byte (humidity high)
 ```
+
+![the image](./6141036436048775955.jpg)
