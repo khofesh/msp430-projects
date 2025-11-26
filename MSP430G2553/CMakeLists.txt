@@ -1,3 +1,4 @@
 add_subdirectory(blink_led)
 add_subdirectory(out_of_box)
 add_subdirectory(uart_bridge_converter)
+add_subdirectory(dht22_to_uart)
