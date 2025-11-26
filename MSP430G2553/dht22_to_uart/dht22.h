@@ -1,3 +1,10 @@
+/*
+license: https://github.com/rbasoalto/msp430-dht22
+
+The MIT License (MIT)
+
+Copyright (c) 2014 Rodrigo Basoalto
+*/
 #pragma once
 
 #include <stdint.h>
