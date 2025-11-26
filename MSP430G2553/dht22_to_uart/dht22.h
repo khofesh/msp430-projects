@@ -8,7 +8,7 @@ Copyright (c) 2014 Rodrigo Basoalto
 #pragma once
 
 #include <stdint.h>
-
+// explain the data structure: humidity high, humidity low, temperature high, temperature low, CRC
 typedef union {
   struct {
     uint8_t hh;
@@ -23,3 +23,4 @@ typedef union {
 void dht_start_read();
 int dht_get_temp();
 int dht_get_rh();
+uint8_t dht_is_crc_valid();

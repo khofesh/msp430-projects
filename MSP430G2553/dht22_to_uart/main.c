@@ -90,7 +90,12 @@ int main()
         {
             int t = dht_get_temp();
             int h = dht_get_rh();
-            uart_send(sprintf(txbuf, "Temp: %3d.%1d C; RH: %3d.%1d %%\r\n", t / 10, t % 10, h / 10, h % 10));
+            
+            if (dht_is_crc_valid()) {
+                uart_send(sprintf(txbuf, "Temp: %3d.%1d C; RH: %3d.%1d %%\r\n", t / 10, t % 10, h / 10, h % 10));
+            } else {
+                uart_send(sprintf(txbuf, "CRC ERROR! T:%d.%d C; RH:%d.%d %%\r\n", t / 10, t % 10, h / 10, h % 10));
+            }
         }
 
         // 2 seconds between readings

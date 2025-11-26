@@ -17,6 +17,15 @@ volatile unsigned char dht_current_state = DHT_IDLE;
 dht22data dht_data;
 
 uint8_t dht_data_byte, dht_data_bit;
+uint8_t dht_crc_valid = 0;
+
+// Check if CRC is valid
+uint8_t dht_check_crc()
+{
+    uint8_t sum = dht_data.val.hh + dht_data.val.hl + 
+                  dht_data.val.th + dht_data.val.tl;
+    return (sum == dht_data.val.crc);
+}
 
 int dht_get_temp()
 {
@@ -34,6 +43,11 @@ int dht_get_rh()
         ;
     temp_rh = (dht_data.val.hh << 8) + dht_data.val.hl;
     return temp_rh;
+}
+
+uint8_t dht_is_crc_valid()
+{
+    return dht_crc_valid;
 }
 
 void dht_start_read()
@@ -114,8 +128,8 @@ timer1_a0_isr()
         }
         if (dht_data_byte >= 5)
         {
-            // I'm done, bye
-            // TODO: check CRC
+            // I'm done, check CRC
+            dht_crc_valid = dht_check_crc();
             TA1CTL = TACLR;
             dht_current_state = DHT_IDLE;
         }
