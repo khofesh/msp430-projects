@@ -20,6 +20,25 @@ uint8_t dht_data_byte, dht_data_bit;
 uint8_t dht_crc_valid = 0;
 
 // Check if CRC is valid
+/*
+Byte 0: Humidity High (hh)
+Byte 1: Humidity Low  (hl)
+Byte 2: Temperature High (th)
+Byte 3: Temperature Low  (tl)
+Byte 4: Checksum (CRC)
+
+CRC = (hh + hl + th + tl) & 0xFF  // Sum of first 4 bytes, keep lower 8 bits
+
+Example:
+If sensor sends:
+
+Humidity: 0x02 0x8A = 650 -> 65.0%
+Temperature: 0x01 0x1A = 282 -> 28.2C
+Checksum: 0xC7
+
+verification
+0x02 + 0x8A + 0x01 + 0x1A = 0xC7 -- Valid
+*/
 uint8_t dht_check_crc()
 {
     uint8_t sum = dht_data.val.hh + dht_data.val.hl + 
