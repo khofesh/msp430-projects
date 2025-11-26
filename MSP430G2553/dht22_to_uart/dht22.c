@@ -10,7 +10,9 @@ enum
     DHT_ACK_HIGH,
     DHT_IN_BIT_LOW,
     DHT_IN_BIT_HIGH,
-} dht_current_state;
+};
+
+volatile unsigned char dht_current_state = DHT_IDLE;
 
 dht22data dht_data;
 
